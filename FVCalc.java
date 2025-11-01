@@ -2,13 +2,12 @@
 public class FVCalc {
 	public static void main(String[] args){
 		double rate = Double.parseDouble(args[1]);
+		rate/=100;
 		int CV = Integer.parseInt(args[0]);
 		int n = Integer.parseInt(args[2]);
-		double FV = CV * (Math.pow(1+rate, n)) /100;
+		double FV = CV * (Math.pow(1+rate, n)); 
 		
-		System.out.println("afer "+n+" years, $"+CV+" saved at "+rate+"% will yield $"+(int)FV);
-
-
+		System.out.println("After "+n+" years, $"+CV+" saved at "+(rate*100)+"% will yield $"+(int)FV);
 
 
 	}
